@@ -128,18 +128,22 @@ function startGame() {
     let carrierDownNums = "rN, rN + 10, rN + 20, rN + 30, rN + 40";
     let carrierLeftNums = "rN, rN - 1, rN - 2, rN - 3, rN - 4";
     let carrierRightNums = "rN, rN + 1, rN + 2, rN + 3, rN + 4";
+    
     let battleshipUpNums = "rN, rN - 10, rN - 20, rN - 30";
     let battleshipDownNums = "rN, rN + 10, rN + 20, rN + 30";
     let battleshipLeftNums = "rN, rN - 1, rN - 2, rN - 3";
     let battleshipRightNums = "rN, rN + 1, rN + 2, rN + 3";
+    
     let cruiserUpNums = "rN, rN - 10, rN - 20";
     let cruiserDownNums = "rN, rN + 10, rN + 20";
     let cruiserLeftNums = "rN, rN - 1, rN - 2";
     let cruiserRightNums = "rN, rN + 1, rN + 2";
+    
     let submarineUpNums = "rN, rN - 10, rN - 20";
     let submarineDownNums = "rN, rN + 10, rN + 20";
     let submarineLeftNums = "rN, rN - 1, rN - 2";
     let submarineRightNums = "rN, rN + 1, rN + 2";
+    
     let destroyerUpNums = "rN, rN - 10";
     let destroyerDownNums = "rN, rN + 10";
     let destroyerLeftNums = "rN, rN - 1";
@@ -151,19 +155,22 @@ function startGame() {
       shipsArray[2].spaces.push(cruiserRightNums);
       shipsArray[3].spaces.push(submarineRightNums);
       shipsArray[4].spaces.push(destroyerRightNums);
-    } else if ((axis = "x" && rN % 10 <= 5)) {
+    } 
+    else if ((axis = "x" && rN % 10 <= 5)) {
       shipsArray[0].spaces.push(carrierLeftNums);
       shipsArray[1].spaces.push(battleshipLeftNums);
       shipsArray[2].spaces.push(cruiserLeftNums);
       shipsArray[3].spaces.push(submarineLeftNums);
       shipsArray[4].spaces.push(destroyerLeftNums);
-    } else if ((axis = "y" && rN <= 49)) {
+    } 
+    else if ((axis = "y" && rN <= 49)) {
       shipsArray[0].spaces.push(carrierDownNums);
       shipsArray[1].spaces.push(battleshipDownNums);
       shipsArray[2].spaces.push(cruiserDownNums);
       shipsArray[3].spaces.push(submarineDownNums);
       shipsArray[4].spaces.push(destroyerDownNums);
-    } else if ((axis = "y" && rN >= 50)) {
+    }
+    else if ((axis = "y" && rN >= 50)) {
       shipsArray[0].spaces.push(carrierUpNums);
       shipsArray[1].spaces.push(battleshipUpNums);
       shipsArray[2].spaces.push(cruiserUpNums);
@@ -172,9 +179,9 @@ function startGame() {
     }
   }
 
-  function shipAlign(randomGenNum) {
+  /*function shipAlign(randomGenNum) {
     // if thisNum data.id ends in <4 increment shipsArray
   }
-}
+}*/
 startGame();
 // document.addEventListener("load", startGame());
