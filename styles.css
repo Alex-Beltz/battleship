@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --grid-size: 400px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--grid-size) / 10);
+}
+
+.grid {
+  height: var(--grid-size);
+  width: var(--grid-size);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  background-color: rgb(173, 85, 13);
+  width: calc(var(--grid-size) / 10);
+  height: calc(var(--grid-size) / 10);
+  border: 1px solid black;
+  color: rgba(247, 218, 183, 0);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.container div:hover {
+  color: rgb(247, 218, 183);
+  transition: all 400ms ease-in-out;
+}
+
+.container div h6 {
+  margin: 0;
+}
+
+.container div.hidden-ship {
+  background-color: rgb(0, 255, 21);
+  color: blue;
+  z-index: 2;
+}
